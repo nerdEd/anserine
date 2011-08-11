@@ -1,0 +1,11 @@
+WHY?
+-------------------------------
+You have a git repository living someplace in the "cloud". This repository has accumulated a lot of branches over time. Those branches have stuff that you don't want to lose while moving to a different git hosting service. This gem allows you to easily move from one git host to another. 
+
+If you're reading this and thinking "Why not scp the directory to the new server?", then you should go do that. This tool was written for when that is not an option.
+
+HOW?
+-------------------------------
+git clone git@github.com:nerded/anserine.git
+git remote add new_host git@evilhub.com:nerded/anserine.git
+anserine migrate origin new_host
